@@ -63,8 +63,6 @@ TypeError: Cannot read variable of undefined
 Whenever you make an object you always use CONST
 - It will always be an object, you are just now free to add/remove keys/values into it
 
-Because objects are not a primitive value, they can be 
-
 When you create a "copy" of an object using obj2 = obj1, you are NOT creating a copy, you're creating a pointer.
 - Same thing applies to arrays
 
@@ -75,13 +73,51 @@ for.. in works in ARRAYS as well, but loops over its zero-based position instead
 
 is the reason why . doesn't work because it's looking for a key NAMED key?
 
-Array.isArray()
-=
-[].isArray()
+Array.isArray() = [].isArray()
 
-## Turnury operator:
+## Ternary operator:
 
 const isItRaining = function(weather) {
 return weather === "raining" ? "Stay inside" : "Go outside"
 // return argument === "raining" ? Truthy statement : Falsy statement
 }
+
+# David H
+## Week 2: L2 - Callbacks & Anonymous functions
+
+**Function declarations** are hoisted to the top of the code
+function sayHello() {};
+
+**Function expressions** cannot
+const sayHello2 = function() {};
+
+Any object can be console logged:
+console.log(sayHello.toString())
+//Displays complete contents of object
+
+**.forEach** is essentially just a for.. loop which accepts a function to do each loop (over an array specifically)
+
+# Alvin Ng
+## Week 3: L1 - 
+
+A test will define what the function is supposed to do and then demonstrate it.
+
+Tests are all kept in a separate file.
+
+Fundamentally all tests are (actual === expected)
+const actual = sayHello('John);
+const expected = sayHello('John);
+
+When a file is require() in another file, the entire required file is executed 
+
+npm install <name of package>
+npm install --save-dev <name of package> (only installs on dev and testing mode, won't export)
+- See: "dev dependencies" in the JSON file
+npm install --global <name of package> (installs into operating system)
+
+## Mocha
+"describe" holds a series of "it" tests
+"it" runs a single test
+
+TDD - Test Driven Development
+You write the test FIRST!!!!
